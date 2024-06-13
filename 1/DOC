@@ -1,0 +1,19 @@
+#Cách 1: đơn giản nhất:
+    [0]*n
+
+#Cách 2: Sử dụng tạo list nhanh
+    [0 for i in range(n)]
+
+#Cách 3: Viết hàm độc lập
+    
+    def sinh_day(n):
+    A=[]
+    for i in range(n):
+    A.append(0)
+    return A
+
+· thư viện random: thư viên hỗ trợ lấy số ngẫu nhiên
+
+· random.randint(a,b): lấy số nguyên ngẫu nhiên trong đoạn a,b
+
+· random.uniform(a,b): lấy số thực ngẫu nhiên trong đoạn a,b
