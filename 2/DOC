@@ -1,0 +1,13 @@
+#Cách khởi tạo với m là hàng, n là cột
+
+#Cách 1: 
+  A = [[0 for i in range (n)] for j in range (m)]
+
+#Cách 2:
+  def sinhMatrix(m,n):
+    A=[]
+    for i in range(m):
+      B=[]
+      for j in range(n):
+        B.append(k
+    A.append(B)
