@@ -1,9 +1,9 @@
 a = [[0 for i in range (5)] for j in range (5)]
-i = 5
-j = 5
-while i > 0 and j > 0:
-    i -= 1
-    j -= 1
-    a[i][j] = 1
-print(a)
- 
+row = 5
+post = -1
+while row > 0 and post < 5:
+    row -= 1
+    post += 1
+    a[row][post] = 1
+for k in range(5):
+    print(a[k])
