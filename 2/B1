@@ -1,3 +1,4 @@
+from array import *
 a = [[0 for i in range (5)] for j in range (5)]
 row = 5
 post = -1
@@ -7,5 +8,6 @@ while row > 0 and post < 5:
     a[row][post] = 1
 for r in a:
     for c in r:
-        print(c)
+        print(c,end="")
     print()
+
