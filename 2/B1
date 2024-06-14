@@ -5,5 +5,7 @@ while row > 0 and post < 5:
     row -= 1
     post += 1
     a[row][post] = 1
-for k in range(5):
-    print(a[k])
+for r in a:
+    for c in r:
+        print(c)
+    print()
