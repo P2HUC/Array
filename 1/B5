@@ -1,1 +1,11 @@
-
+import random
+n = int(input())
+c = []
+d = []
+for i in range(n):
+    c.append(random.randint(1, 100))
+c.sort()
+for i in c:
+    if c.count(i) >= 2:
+        d.append(i)
+print(d)
