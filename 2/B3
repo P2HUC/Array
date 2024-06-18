@@ -1,0 +1,9 @@
+a = [[1, 4, 7], [2, 6, 9]]
+m = len(a)
+n = len(a[0])
+at = [[0 for _ in range(m)] for _ in range(n)]
+for i in range(m):
+    for j in range(n):
+        at[j][i] = a[i][j]
+for r in at:
+    print(" ".join(map(str, r)))
