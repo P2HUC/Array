@@ -1,0 +1,30 @@
+import math
+def sntbc(n):
+    if n <= 1:
+        return False
+    if n == 2:
+        return True
+    if n % 2 == 0:
+        return False
+    for i in range(3, int(math.sqrt(n)) + 1, 2):
+        if n % i == 0:
+            return False
+    return True
+
+row, post = map(int,input().split())
+a = []
+for i in range(row):
+    r = list(map(int, input().split()))
+    a.append(r)
+
+lst = []
+for r in a:
+    sntinr = [num for num in r if sntbc(num)]
+    lst.append(sntinr)
+    
+for prime in lst:
+        if prime:
+            print(" ".join(map(str, prime)))
+        else:
+            print()
+
