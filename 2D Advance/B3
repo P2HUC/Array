@@ -1,1 +1,22 @@
+a = [[1,2,1],[4,5,6],[7,8,9]]
+row = len(a)
+post = len(a[0])
+tmp = []
+for r in range(row):
+    tmp.append(min(a[r]))
+    tmp.append(max(a[r]))
+nho = min(tmp)
+lon = max(tmp)
+lsttimx = []
+lsttimy = []
+for i in range(len(a)):
+        for j in range(len(a[i])):
+            if a[i][j] == nho:
+                lsttimx.append(str(i+1)+" "+str(j+1))
+            elif a[i][j] == lon:
+                lsttimy.append(str(i+1)+" "+str(j+1))
+print(lsttimx)
+print(lsttimy)
+#dm bai lon
+                
 
