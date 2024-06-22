@@ -1,0 +1,20 @@
+m, n = map(int, input().split())
+a = []
+for i in range(m):
+    r = list(map(int, input().split()))
+    a.append(r)
+row = len(a)
+post = len(a[0])
+tolr = []
+tolc = []
+for r in range(row):
+    tolr.append(sum(a[r]))
+at = [[0 for _ in range(row)] for _ in range(post)]
+for i in range(row):
+    for j in range(post):
+        at[j][i] = a[i][j]
+for c in range(post):
+    tolc.append(sum(at[c]))
+print(*tolr)
+print(*tolc)
+
