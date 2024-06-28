@@ -1,0 +1,18 @@
+n = int(input())
+a = []
+for i in range(n):
+    r = list(map(int, input().split()))
+    a.append(r)
+
+print("Pattern 1")
+for row in a:
+        print(" ".join(map(str, row)))
+print("Pattern 2")        
+for row in a[::-1]:
+        print(" ".join(map(str, row[::-1])))
+print("Pattern 3")        
+for row in a[::-1]:
+        print(" ".join(map(str, row)))
+print("Pattern 4")        
+for row in a:
+        print(" ".join(map(str, row[::-1])))
