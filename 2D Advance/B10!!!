@@ -1,0 +1,29 @@
+import math
+
+def snt(num):
+    if num <= 1:
+        return False
+    if num == 2:
+        return True
+    if num % 2 == 0:
+        return False
+    for i in range(3, int(math.sqrt(num)) + 1, 2):
+        if num % i == 0:
+            return False
+    return True
+
+n = int(input())
+a = []
+for r in range(n):
+    row = list(map(int, input().split()))
+    a.append(row)
+    
+final = set()
+
+for i in range(n):
+    if snt(a[i][i]):
+        final.add(a[i][i])
+    if snt(a[i][n - 1 - i]):
+        final.add(a[i][n - 1 - i])
+        
+print(len(final))
