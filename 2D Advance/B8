@@ -1,11 +1,12 @@
 n = int(input()) 
 a = []
-for _ in range(n):
+for r in range(n):
     row = list(map(int, input().split()))
     a.append(row)
 u, v = map(int, input().split())
 u -= 1
 v -= 1
-a[u], a[v] = a[v], a[u]
+for i in range(n):
+    a[i][u], a[i][v] = a[i][v], a[i][u]
 for row in a:
     print(" ".join(map(str, row)))
