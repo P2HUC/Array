@@ -1,0 +1,28 @@
+n = int(input().strip())
+a = []
+
+for i in range(n):
+    row = list(map(int, input().strip().split()))
+    a.append(row)
+    
+cols = []
+
+for j in range(n):
+    col = []
+    for i in range(n):
+        col.append(a[i][j])
+    cols.append(col)
+    
+for col in cols:
+    col.sort()
+    
+kq = []
+
+for i in range(n):
+    kqr = []
+    for j in range(n):
+        kqr.append(cols[j][i])
+    kq.append(kqr)
+
+for row in kq:
+    print(" ".join(map(str, row)))
