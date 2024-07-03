@@ -1,0 +1,9 @@
+n = int(input().strip())
+a = []
+for _ in range(n):
+    row = list(map(int, input().strip().split()))
+    a.append(row)
+for i in range(n):
+    a[i].sort()
+for row in a:
+    print(" ".join(map(str, row)))
