@@ -1,0 +1,36 @@
+n = int(input().strip())
+
+fi = [0, 1]
+while len(fi) < n * n:
+    fi.append(fi[-1] + fi[-2])
+
+a = [[0] * n for i in range(n)]
+
+vtri = 0
+l, r = 0, n - 1
+top, bot = 0, n - 1
+
+while l <= r and top <= bot:
+    for i in range(l, r + 1):
+        a[top][i] = fi[vtri]
+        vtri += 1
+    top += 1 
+
+    for i in range(top, bot + 1):
+        a[i][r] = fi[vtri]
+        vtri += 1
+    r -= 1
+
+    for i in range(r, l - 1, -1):
+        a[bot][i] = fi[vtri]
+        vtri += 1
+    bot -= 1
+
+    for i in range(bot, top - 1, -1):
+        a[i][l] = fi[vtri]
+        vtri += 1
+    l += 1
+
+for row in a:
+    print(" ".join(map(str, row)))
+
